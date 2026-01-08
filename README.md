@@ -18,7 +18,7 @@ The API allows users to store and manage GitHub repository metadata. When a repo
 * Rate limiting and GitHub outages are possible and must be handled gracefully
 * PostgreSQL is running locally during development
 
----
+
 
 #Design Decisions
 
@@ -93,11 +93,10 @@ This ensures the application does not crash and always returns meaningful respon
 # How to Run the Project
 
 #Setup Virtual Environment
-bash
+
 python -m venv .venv
 .venv\\Scripts\\activate
 Install Dependencies
-bash
 pip install -r requirements.txt
 
 #Environment Variables
@@ -110,8 +109,7 @@ GITHUB_API_BASE=https://api.github.com
 
 #Run the Application
 
-bash
-python -m uvicorn app.main:app --reload
+python -m uvicorn app.main:app 
 
 # Swagger Documentation
 
@@ -133,7 +131,7 @@ http://127.0.0.1:8000/docs
 #Testing
 
 #Run Tests
-bash
+
 pytest
 
 #Test Coverage
